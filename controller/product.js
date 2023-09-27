@@ -7,7 +7,6 @@ const Order = require("../model/order");
 const Shop = require("../model/shop");
 const cloudinary = require("cloudinary").v2;
 const ErrorHandler = require("../utils/ErrorHandler");
-const { upload } = require("../multer");
 require("dotenv").config();
 
 cloudinary.config({
@@ -45,7 +44,6 @@ router.post(
     }
   })
 );
-
 
 router.post(
   "/createProducts",
