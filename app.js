@@ -36,11 +36,8 @@ const userRoutes = require("./routes/userRoutes");
 const shopRoutes = require("./controller/Shop");
 const productRoutes = require("./controller/product");
 const eventRoutes = require("./controller/events");
-const couponCodeRoutes = require("./routes/couponCodeRoutes");
 const paymentRoutes = require("./controller/paymentController");
 const order = require("./controller/orderController");
-const conversation = require("./controller/conversationController");
-const message = require("./controller/messageController");
 
 // app.use("/api/v2/user", userRoutes); // Adjusted the route prefix
 app.get("/", (req, res) => {
@@ -50,11 +47,8 @@ app.use("/api/users", userRoutes);
 app.use("/api/shops", shopRoutes);
 app.use("/api/products", productRoutes);
 app.use("/api/events", eventRoutes);
-app.use("/api/coupon", couponCodeRoutes);
 app.use("/api/payment", paymentRoutes);
 app.use("/api/orders", order)
-app.use("/api/conversation", conversation)
-app.use("/api/messages", message)
 
 // Error handling middleware
 app.use((err, req, res, next) => {
