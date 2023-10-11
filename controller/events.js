@@ -58,11 +58,10 @@ router.post(
       } else {
 
         const eventData = req.body;
-        // productData.images = imagesLinks;
-        productData.shop = shop;
+        eventData.shop = shop;
 
         // Create the event
-        const event = await Event.create(productData);
+        const event = await Event.create(eventData);
 
         res.status(201).json({
           success: true,
